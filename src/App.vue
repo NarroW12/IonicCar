@@ -5,7 +5,7 @@
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Samochody</ion-list-header>
-            <ion-note>hi@ionicframework.com</ion-note>
+           
 
             <ion-menu-toggle :auto-hide="false" v-for="(p, i) in appPages" :key="i">
               <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" :detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
@@ -57,42 +57,37 @@ import {
 
 const selectedIndex = ref(0);
 const appPages = [
-  {
-    title: 'Inbox',
-    url: '/folder/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
-  },
+ 
   {
     title: 'Audi',
     url: '/audi',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp,
+      iosIcon: heartOutline,
+    mdIcon: heartSharp,
+    
   },
   {
     title: 'BMW',
     url: '/bmw',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp,
+      iosIcon: trashOutline,
+    mdIcon: trashSharp,
+  
   },
   {
     title: 'Mercedes-Benz',
     url: '/mercedesbenz',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp,
+    
   },
   {
     title: 'Volkswagen',
     url: '/volkswagen',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp,
-  },
-  {
-    title: 'Spam',
-    url: '/folder/Spam',
+  
     iosIcon: warningOutline,
     mdIcon: warningSharp,
   },
+  
+
 ];
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 

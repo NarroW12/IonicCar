@@ -17,22 +17,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/volkswagen',
     name: 'Volkswagen',
-    component: Volkswagen
+    component: () => import('@/views/Volkswagen.vue')
   },
   {
     path: '/Audi',
     name: 'Audi',
-    component: Audi
+    component: () => import('@/views/Audi.vue')
   },
   {
     path: '/BMW',
     name: 'BMW',
-    component: BMW
+    component: () => import('@/views/BMW.vue')
   },
   {
     path: '/mercedesbenz',
     name: 'MercedesBenz',
-    component: MercedesBenz
+    component: () => import('@/views/MercedesBenz.vue')
   },
 ]
 
